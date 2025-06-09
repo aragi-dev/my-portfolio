@@ -1,0 +1,267 @@
+
+@theme {
+  --color-gray: #4a4a4a;
+  --color-glow-blue: #007bff;
+  --color-glow-red: #dc3545;
+  --color-glow-green: #28a745;
+  --color-glow-yellow: #ffc107;
+  --color-glow-purple: #6f42c1;
+  --color-glow-pink: #e83e8c;
+  --color-glow-orange: #fd7e14;
+  --color-glow-cyan: #17a2b8;
+  --color-glow-light: #f8f9fa;
+  --color-glow-dark: #343a40;
+  --color-glow-white: #fefefe;
+}
+
+@utility bg-glow-red {
+  background-color: var(--color-Red);
+  box-shadow:
+    0 0 15px var(--color-Red),
+    inset 0 0 120px var(--color-Red);
+}
+
+@utility bg-glow-blue {
+  background-color: var(--color-Blue);
+  box-shadow:
+    0 0 15px var(--color-Blue),
+    inset 0 0 120px var(--color-Blue);
+}
+
+@utility bg-glow-green {
+  background-color: var(--color-Green);
+  box-shadow:
+    0 0 15px var(--color-Green),
+    inset 0 0 120px var(--color-Green);
+}
+
+@utility bg-glow-yellow {
+  background-color: var(--color-Yellow);
+  box-shadow:
+    0 0 15px var(--color-Yellow),
+    inset 0 0 120px var(--color-Yellow);
+}
+
+@utility bg-glow-purple {
+  background-color: var(--color-Purple);
+  box-shadow:
+    0 0 15px var(--color-Purple),
+    inset 0 0 120px var(--color-Purple);
+}
+
+@utility bg-glow-pink {
+  background-color: var(--color-Pink);
+  box-shadow:
+    0 0 15px var(--color-Pink),
+    inset 0 0 120px var(--color-Pink);
+}
+
+@utility bg-glow-orange {
+  background-color: var(--color-Orange);
+  box-shadow:
+    0 0 15px var(--color-Orange),
+    inset 0 0 120px var(--color-Orange);
+}
+
+@utility bg-glow-cyan {
+  background-color: var(--color-Cyan);
+  box-shadow:
+    0 0 15px var(--color-Cyan),
+    inset 0 0 120px var(--color-Cyan);
+}
+
+@utility bg-glow-light {
+  background-color: var(--color-Light);
+  box-shadow:
+    0 0 15px var(--color-Light),
+    inset 0 0 120px var(--color-Light);
+}
+
+@utility bg-glow-dark {
+  background-color: var(--color-Dark);
+  box-shadow:
+    0 0 15px var(--color-Dark),
+    inset 0 0 120px var(--color-Dark);
+}
+
+@utility bg-glow-white {
+  background-color: var(--color-White);
+  box-shadow:
+    0 0 15px var(--color-White),
+    inset 0 0 120px var(--color-White);
+}
+
+@utility bg-glow-gray {
+  background-color: var(--color-Gray);
+  box-shadow:
+    0 0 15px var(--color-Gray),
+    inset 0 0 120px var(--color-Gray);
+}
+
+@utility text-glow-red {
+  color: var(--color-Red);
+  text-shadow: 0 0 15px var(--color-Red);
+}
+
+@utility text-glow-blue {
+  color: var(--color-Blue);
+  text-shadow: 0 0 15px var(--color-Blue);
+}
+
+@utility text-glow-green {
+  color: var(--color-Green);
+  text-shadow: 0 0 15px var(--color-Green);
+}
+
+@utility text-glow-yellow {
+  color: var(--color-Yellow);
+  text-shadow: 0 0 15px var(--color-Yellow);
+}
+
+@utility text-glow-purple {
+  color: var(--color-Purple);
+  text-shadow: 0 0 15px var(--color-Purple);
+}
+
+@utility text-glow-pink {
+  color: var(--color-Pink);
+  text-shadow: 0 0 15px var(--color-Pink);
+}
+
+@utility text-glow-orange {
+  color: var(--color-Orange);
+  text-shadow: 0 0 15px var(--color-Orange);
+}
+
+@utility text-glow-cyan {
+  color: var(--color-Cyan);
+  text-shadow: 0 0 15px var(--color-Cyan);
+}
+
+@utility text-glow-light {
+  color: var(--color-Light);
+  text-shadow: 0 0 15px var(--color-Light);
+}
+
+@utility text-glow-dark {
+  color: var(--color-Dark);
+  text-shadow: 0 0 15px var(--color-Dark);
+}
+
+@utility text-glow-white {
+  color: var(--color-White);
+  text-shadow: 0 0 15px var(--color-White);
+}
+
+@utility text-glow-gray {
+  color: var(--color-Gray);
+  text-shadow: 0 0 15px var(--color-Gray);
+}
+
+@utility border-glow-red {
+  box-shadow: 0 0 12px var(--color-Red);
+}
+
+@utility border-glow-blue {
+  box-shadow: 0 0 12px var(--color-Blue);
+}
+
+@utility border-glow-green {
+  box-shadow: 0 0 12px var(--color-Green);
+}
+
+@utility border-glow-yellow {
+  box-shadow: 0 0 12px var(--color-Yellow);
+}
+
+@utility border-glow-purple {
+  box-shadow: 0 0 12px var(--color-Purple);
+}
+
+@utility border-glow-pink {
+  box-shadow: 0 0 12px var(--color-Pink);
+}
+
+@utility border-glow-orange {
+  box-shadow: 0 0 12px var(--color-Orange);
+}
+
+@utility border-glow-cyan {
+  box-shadow: 0 0 12px var(--color-Cyan);
+}
+
+@utility border-glow-light {
+  box-shadow: 0 0 12px var(--color-Light);
+}
+
+@utility border-glow-dark {
+  box-shadow: 0 0 12px var(--color-Dark);
+}
+
+@utility border-glow-white {
+  box-shadow: 0 0 12px var(--color-White);
+}
+
+@utility border-glow-gray {
+  box-shadow: 0 0 12px var(--color-Gray);
+}
+
+@utility svg-glow-red {
+  fill: var(--color-Red);
+  filter: drop-shadow(0 0 5px var(--color-Red));
+}
+
+@utility svg-glow-blue {
+  fill: var(--color-Blue);
+  filter: drop-shadow(0 0 5px var(--color-Blue));
+}
+
+@utility svg-glow-green {
+  fill: var(--color-Green);
+  filter: drop-shadow(0 0 5px var(--color-Green));
+}
+
+@utility svg-glow-yellow {
+  fill: var(--color-Yellow);
+  filter: drop-shadow(0 0 5px var(--color-Yellow));
+}
+
+@utility svg-glow-purple {
+  fill: var(--color-Purple);
+  filter: drop-shadow(0 0 5px var(--color-Purple));
+}
+
+@utility svg-glow-pink {
+  fill: var(--color-Pink);
+  filter: drop-shadow(0 0 5px var(--color-Pink));
+}
+
+@utility svg-glow-orange {
+  fill: var(--color-Orange);
+  filter: drop-shadow(0 0 5px var(--color-Orange));
+}
+
+@utility svg-glow-cyan {
+  fill: var(--color-Cyan);
+  filter: drop-shadow(0 0 5px var(--color-Cyan));
+}
+
+@utility svg-glow-light {
+  fill: var(--color-Light);
+  filter: drop-shadow(0 0 5px var(--color-Light));
+}
+
+@utility svg-glow-dark {
+  fill: var(--color-Dark);
+  filter: drop-shadow(0 0 5px var(--color-Dark));
+}
+
+@utility svg-glow-white {
+  fill: var(--color-White);
+  filter: drop-shadow(0 0 5px var(--color-White));
+}
+
+@utility svg-glow-gray {
+  fill: var(--color-Gray);
+  filter: drop-shadow(0 0 5px var(--color-Gray));
+}

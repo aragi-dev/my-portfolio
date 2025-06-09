@@ -1,0 +1,144 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Icon from "@components/Icon.astro";
+---
+
+<Layout>
+  <main
+    class="grid z-0 w-full h-full text-center pointer-events-none select-none fixed inset-0 items-center"
+  >
+    <h1 class="text-7xl font-bold text-stone-400 opacity-50">Ctrl + O</h1>
+  </main>
+  <section>
+    <div
+      id="info"
+      class="hidden rounded-lg bg-zinc-900 relative p-4 outline-2 outline-zinc-700"
+    >
+      <span>hola</span>
+      <button
+        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        id="close-info"
+      >
+        <Icon
+          name="circle"
+          size="18"
+          css="fill-red-400 transition-all hover:fill-red-500"
+        />
+      </button>
+    </div>
+  </section>
+  <div
+    id="modal"
+    class="fixed inset-0 bg-opacity-50 hidden items-center justify-center"
+  >
+    <div
+      class="z-10 max-w-sm w-fit rounded-lg bg-zinc-900 relative p-4 outline-2 outline-zinc-700"
+    >
+      <div>
+        <label for="console-input"> /> </label>
+        <input
+          name="console-input"
+          id="console-input"
+          type="text"
+          class="outline-none"
+        />
+      </div>
+
+      <button
+        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        id="close-modal"
+      >
+        <Icon
+          name="circle"
+          size="18"
+          css="fill-red-400 transition-all hover:fill-red-500"
+        />
+      </button>
+    </div>
+  </div>
+  <script>
+    const input = document.getElementById("console-input") as HTMLInputElement;
+    const closeBtn = document.getElementById(
+      "close-modal",
+    ) as HTMLButtonElement;
+
+    const showCard = (id: string) => {
+      const card = document.getElementById(id);
+      if (card) {
+        card.classList.remove("hidden");
+      }
+    };
+
+    const hideCard = (id: string) => {
+      const card = document.getElementById(id);
+      if (card) {
+        card.classList.add("hidden");
+      }
+    };
+
+    const Info = document.getElementById("info") as HTMLElement;
+
+    const showModal = () => {
+      const modal = document.getElementById("modal");
+      if (modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+    };
+
+    const hiddenModal = () => {
+      const modal = document.getElementById("modal");
+      if (modal) {
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+    };
+
+    const comandos: Record<string, () => void> = {
+      info: () => {
+        showCard("info");
+      },
+      ping: () => {
+        console.log("pong");
+      },
+    };
+
+    document.addEventListener("keydown", function (event) {
+      if (event.ctrlKey && event.key === "o") {
+        event.preventDefault();
+        showModal();
+        if (input) input.focus();
+      }
+    });
+
+    const cleanInput = () => {
+      if (input) input.value = "";
+    };
+
+    input.addEventListener("keydown", (event: KeyboardEvent) => {
+      if (event.key === "Enter") {
+        const accion = comandos[input.value.trim().toLowerCase()];
+        if (accion) {
+          accion();
+          hiddenModal();
+          cleanInput();
+        } else {
+          alert("Comando no reconocido");
+        }
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        hiddenModal();
+        cleanInput();
+        hideCard("info");
+      });
+    }
+    if (Info) {
+      Info.addEventListener("click", () => {
+        hideCard("info");
+      });
+    }
+  </script>
+</Layout>

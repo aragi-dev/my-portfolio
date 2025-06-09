@@ -1,0 +1,39 @@
+---
+import iconsDataJson from "@assets/icons.json";
+import IconName from "@utils/enums/IconName";
+import { error } from "@utils/Logger";
+
+interface IIconProps {
+  name: IconName;
+  size?: string;
+  css?: string;
+  label?: string;
+}
+interface IIconData {
+  viewBox: string;
+  paths: string[];
+}
+
+const { name, size = "24", css = "", label } = Astro.props as IIconProps;
+const iconsData = iconsDataJson as Record<IconName, IIconData>;
+
+function getIconData(iconName: IconName): IIconData {
+  if (iconsData[iconName]) return iconsData[iconName];
+  error(`icon '${iconName}' not found`);
+  return iconsData[IconName.warning];
+}
+
+const icon = getIconData(name);
+const ariaLabel = label ?? name;
+---
+
+<svg
+  width={size}
+  height={size}
+  class={css}
+  viewBox={icon.viewBox}
+  role="img"
+  aria-label={ariaLabel}
+>
+  {icon.paths.map((d) => <path d={d} />)}
+</svg>
