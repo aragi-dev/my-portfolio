@@ -1,5 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
 @import "tailwindcss";
 
-@utility font-courier {
-  font-family: 'Courier New', monospace;
+@utility font-code {
+ font-family: 'Cascadia Code', sans-serif;                                               
 }

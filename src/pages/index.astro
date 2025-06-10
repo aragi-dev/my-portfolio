@@ -7,17 +7,151 @@ import Icon from "@components/Icon.astro";
   <main
     class="grid z-0 w-full h-full text-center pointer-events-none select-none fixed inset-0 items-center"
   >
-    <h1 class="text-7xl font-bold text-stone-400 opacity-50">Ctrl + O</h1>
+    <p class="opacity-50">
+      Please press
+      <kbd class="bg-black/15 outline-2 outline-black/25">Ctrl</kbd>
+      +
+      <kbd class="bg-black/15 outline-2 outline-black/25">O</kbd>
+      to search.
+    </p>
   </main>
-  <section>
+  <section class="flex flex-wrap gap-4 p-4 overflow-y-auto max-h-screen">
     <div
       id="info"
-      class="hidden rounded-lg bg-zinc-900 relative p-4 outline-2 outline-zinc-700"
+      class="opacity-0 scale-95 pointer-events-none select-none transition duration-300 ease-in-out hidden rounded-lg relative w-fit h-fit items-center pr-8 pt-4 bg-black/15 outline-2 outline-black/25"
     >
-      <span>hola</span>
+      <pre
+        class="whitespace-pre text-sm text-gray-300 rounded-lg">
+      <code>
+      <span>&#123;</span>
+        <span class="text-blue-300">"name"</span>: <span class="text-gray-300">"oscar aldair matu miranda"</span>,
+        <span class="text-blue-300">"roles"</span>: [
+          <span class="text-gray-300">"backend"</span>,
+          <span class="text-gray-300">"frontend"</span>,
+          <span class="text-gray-300">"movile"</span>
+        ],
+        <span class="text-blue-300">"from"</span>: <span class="text-gray-300">"México"</span>,
+        <span class="text-blue-300">"skills"</span>: &#123;
+          <span class="text-gray-300">"languages"</span>: [
+            <span class="text-gray-300">"TypeScript"</span>
+          ],
+          <span class="text-blue-300">"frameworks"</span>: [
+            <span class="text-gray-300">"vue3"</span>,
+            <span class="text-gray-300">"serverless"</span>,
+            <span class="text-gray-300">"sst"</span>,
+            <span class="text-gray-300">"capacitor"</span>,
+            <span class="text-gray-300">"mjml"</span>
+          ],
+          <span class="text-blue-300">"tools"</span>: [
+            <span class="text-gray-300">"Git"</span>,
+            <span class="text-gray-300">"CD/CI"</span>,
+            <span class="text-gray-300">"AWS"</span>
+          ]
+        &#125;,
+      <span>&#125;</span>
+      </code>
+      </pre>
       <button
         class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
         id="close-info"
+      >
+        <Icon
+          name="circle"
+          size="18"
+          css="fill-red-400 transition-all hover:fill-red-500"
+        />
+      </button>
+    </div>
+    <div
+      id="proyects"
+      class="opacity-0 scale-95 pointer-events-none select-none transition duration-200 ease-in-out hidden rounded-lg relative w-fit h-fit items-center pr-8 pt-4 bg-black/15 outline-2 outline-black/25"
+    >
+    <pre
+      class="whitespace-pre text-sm text-gray-300 rounded-lg">
+    <code>
+    [
+      <span>&#123;</span>
+        <span class="text-blue-300">"name"</span>: <span class="text-gray-300">"back-sst"</span>,
+        <span class="text-blue-300">"platform"</span>: <span class="text-gray-300">"aws"</span>,
+        <span class="text-blue-300">"technologies"</span>: <span>&#123;</span>
+          <span class="text-gray-300">"sst"</span>,
+          <span class="text-gray-300">"typeorm"</span>,
+          <span class="text-gray-300">"tsyringe"</span>,
+          <span class="text-gray-300">"zod"</span>,
+          <span class="text-gray-300">"typescript"</span>,
+          <span class="text-gray-300">"aws-lambda"</span>,
+          <span class="text-gray-300">"jwt"</span>,
+          <span class="text-gray-300">"bun"</span>,
+        <span>&#125;</span>
+      <span>&#125;</span>
+      <span>&#123;</span>
+        <span class="text-blue-300">"name"</span>: <span class="text-gray-300">"shopia-frond"</span>,
+        <span class="text-blue-300">"platform"</span>: <span class="text-gray-300">"web"</span>,
+        <span class="text-blue-300">"technologies"</span>: <span>&#123;</span>
+          <span class="text-gray-300">"pinia"</span>,
+          <span class="text-gray-300">"vue"</span>,
+          <span class="text-gray-300">"vite"</span>,
+          <span class="text-gray-300">"axios"</span>,
+          <span class="text-gray-300">"typescript"</span>,
+          <span class="text-gray-300">"tailwindcss"</span>,
+        <span>&#125;</span>
+      <span>&#125;</span>
+    ]
+    </code>
+    </pre>
+      <button
+        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        id="close-proyects"
+      >
+        <Icon
+          name="circle"
+          size="18"
+          css="fill-red-400 transition-all hover:fill-red-500"
+        />
+      </button>
+    </div>
+    <div
+      id="contact"
+      class="opacity-0 scale-95 pointer-events-none select-none transition duration-200 ease-in-out hidden rounded-lg relative w-fit h-fit items-center pr-8 pt-4 bg-black/15 outline-2 outline-black/25"
+    >
+    <pre
+      class="w-fit h-fit text-sm text-gray-300 rounded-lg">
+    <code class="w-fit h-fit">
+     <span>&#123;</span>
+      <samp class="text-blue-300">"facebook"</samp>: <a href="" class="text-gray-300">"Aldo"</a>,
+      <samp class="text-blue-300">"linkedin"</samp>: <a target="_blank" href="https://www.linkedin.com/in/aldo-matu-665943342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-300 cursor-pointer underline">"Aldo Matu"</a>,
+      <samp class="text-blue-300">"gmail"</samp>: <a class="text-gray-300">"omatu.dev@gmail.com"</a>,
+      <samp class="text-blue-300">"github"</samp>: <a target="_blank" href="https://github.com/aragi-dev" class="text-gray-300 cursor-pointer underline">"aragi-dev"</a>,
+     <span>&#125;</span>
+    </code>
+    </pre>
+      <button
+        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        id="close-contact"
+      >
+        <Icon
+          name="circle"
+          size="18"
+          css="fill-red-400 transition-all hover:fill-red-500"
+        />
+      </button>
+    </div>
+    <div
+      id="help"
+      class="opacity-0 scale-95 pointer-events-none select-none transition duration-200 ease-in-out hidden rounded-lg relative w-fit h-fit items-center bg-black/15 outline-2 outline-black/25"
+    >
+    <pre class="text-sm text-gray-300 rounded-lg pr-8">
+    <code class="pr">
+    <samp class="text-blue-300">"comands"</samp>
+      <span class="text-gray-300">/help</span>
+      <span class="text-gray-300">/contact</span>
+      <span class="text-gray-300">/info</span>
+      <span class="text-gray-300">/proyects</span>
+    </code>
+    </pre>
+      <button
+        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        id="close-help"
       >
         <Icon
           name="circle"
@@ -57,26 +191,49 @@ import Icon from "@components/Icon.astro";
     </div>
   </div>
   <script>
+    import { DateName } from "@/utils/enums/DataNames";
     const input = document.getElementById("console-input") as HTMLInputElement;
     const closeBtn = document.getElementById(
-      "close-modal",
+      "close-modal"
     ) as HTMLButtonElement;
+    const cardIds = [
+      DateName.INFO,
+      DateName.PROYECTS,
+      DateName.CONTACT,
+      DateName.HELP,
+    ];
+    const closeButtons = cardIds.map(
+      (id) => document.getElementById(`close-${id}`) as HTMLButtonElement
+    );
 
     const showCard = (id: string) => {
       const card = document.getElementById(id);
       if (card) {
         card.classList.remove("hidden");
+        card.offsetHeight;
+        card.classList.remove(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+          "select-none"
+        );
       }
     };
 
     const hideCard = (id: string) => {
       const card = document.getElementById(id);
       if (card) {
-        card.classList.add("hidden");
+        card.classList.add(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+          "select-none"
+        );
+        setTimeout(() => {
+          card.classList.add("hidden");
+        }, 200);
       }
     };
-
-    const Info = document.getElementById("info") as HTMLElement;
 
     const showModal = () => {
       const modal = document.getElementById("modal");
@@ -95,12 +252,11 @@ import Icon from "@components/Icon.astro";
     };
 
     const comandos: Record<string, () => void> = {
-      info: () => {
-        showCard("info");
-      },
-      ping: () => {
-        console.log("pong");
-      },
+      info: () => showCard(DateName.INFO),
+      proyects: () => showCard(DateName.PROYECTS),
+      contact: () => showCard(DateName.CONTACT),
+      help: () => showCard(DateName.HELP),
+      ping: () => console.log("pong"),
     };
 
     document.addEventListener("keydown", function (event) {
@@ -120,8 +276,8 @@ import Icon from "@components/Icon.astro";
         const accion = comandos[input.value.trim().toLowerCase()];
         if (accion) {
           accion();
-          hiddenModal();
           cleanInput();
+          hiddenModal();
         } else {
           alert("Comando no reconocido");
         }
@@ -130,15 +286,14 @@ import Icon from "@components/Icon.astro";
 
     if (closeBtn) {
       closeBtn.addEventListener("click", () => {
-        hiddenModal();
         cleanInput();
-        hideCard("info");
+        hiddenModal();
       });
     }
-    if (Info) {
-      Info.addEventListener("click", () => {
-        hideCard("info");
-      });
-    }
+    closeButtons.forEach((btn, idx) => {
+      if (btn) {
+        btn.addEventListener("click", () => hideCard(cardIds[idx]));
+      }
+    });
   </script>
 </Layout>
