@@ -13,6 +13,7 @@ import Icon from "@components/Icon.astro";
       +
       <kbd class="bg-black/15 outline-2 outline-black/25">O</kbd>
       to search.
+      <kbd class="text-sm">(o manten pulzado la pantalla)</kbd>
     </p>
   </main>
   <section class="flex flex-wrap gap-4 p-4 overflow-y-auto max-h-screen">
@@ -281,6 +282,25 @@ import Icon from "@components/Icon.astro";
         } else {
           alert("Comando no reconocido");
         }
+      }
+    });
+
+    let touchTimer: ReturnType<typeof setTimeout> | undefined;
+    const LONG_PRESS_DURATION = 600;
+
+    document.addEventListener("touchstart", (event) => {
+      if (event.touches.length === 1) {
+        touchTimer = setTimeout(() => {
+          showModal();
+          if (input) input.focus();
+        }, LONG_PRESS_DURATION);
+      }
+    });
+
+    document.addEventListener("touchend", () => {
+      if (touchTimer !== undefined) {
+        clearTimeout(touchTimer);
+        touchTimer = undefined;
       }
     });
 
