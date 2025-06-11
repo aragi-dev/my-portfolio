@@ -1,6 +1,7 @@
 ---
 import "@styles/global.css";
-import Analytics from '@vercel/analytics/astro'
+import Analytics from '@vercel/analytics/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -12,6 +13,7 @@ import Analytics from '@vercel/analytics/astro'
     <title>Aldo</title>
   </head>
   <body class="bg-radial from-zinc-700 from-10% to-zinc-900 p-4 grid grid-flow-row gap-4 h-svh w-full text-gray-300 font-code">
+    <SpeedInsights />
     <Analytics />
     <slot />
   </body>
